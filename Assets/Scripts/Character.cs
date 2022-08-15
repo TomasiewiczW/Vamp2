@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int maxHp = 1000;
+    public int currentHp = 1000;
+    [SerializeField] StatusBar hpBar;
+
+    public void takeDamage(int damage)
     {
-        
+        currentHp -= damage;
+        hpBar.SetState(currentHp, maxHp);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void heal(int amount)
     {
-        
+        if(currentHp <=0 ) { return; }
+        currentHp += amount;
+        if(currentHp > maxHp)
+        {
+            currentHp = maxHp;
+        }
     }
 }

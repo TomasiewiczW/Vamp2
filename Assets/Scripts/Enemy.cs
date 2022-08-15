@@ -5,15 +5,20 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] Transform targetDestination;
+    [SerializeField] GameObject targetGameObject;
     [SerializeField] float speed;
+
+    Character targetCharacter;
 
     Rigidbody2D rgdbd2d;
 
-    [SerializeField] int hp = 4;
+    [SerializeField] int hp = 999;
+    [SerializeField] int damage = 1;
 
     private void Awake()
     {
         rgdbd2d = GetComponent<Rigidbody2D>();
+        targetGameObject = targetDestination.gameObject;
     }
 
     private void FixedUpdate()
@@ -21,6 +26,24 @@ public class Enemy : MonoBehaviour
         Vector3 direction = (targetDestination.position - transform.position).normalized;
         rgdbd2d.velocity = direction * speed;
 
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if(collision.gameObject == targetGameObject)
+        {
+            Attack();
+        }
+    }
+
+    private void Attack()
+    {
+        if(targetCharacter == null)
+        {
+            targetCharacter = targetGameObject.GetComponent<Character>();
+        }
+
+        targetCharacter.takeDamage(damage);
     }
 
     public void TakeDamage(int damage)
