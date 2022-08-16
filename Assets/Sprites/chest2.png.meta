@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 35b798c8fd8f50046a920b4c9c0a93ce
+guid: b84eea86df5c18447b6b81b362a7c993
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,29 +100,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tree
+      name: chest2_0
       rect:
         serializedVersion: 2
-        x: 129
-        y: 97
-        width: 31
-        height: 31
+        x: 1
+        y: 0
+        width: 30
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,29 +118,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4448be033c49faa478e14be4f0aa6042
-      internalID: -1544420909
+      spriteID: 8e63c0abee912ee439f10e26da49ebe0
+      internalID: -460303756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: health
+      name: chest2_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 258
-        width: 11
-        height: 11
+        x: 33
+        y: 0
+        width: 30
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: deca85565129daf47a37975d7fd54620
-      internalID: -527628104
+      spriteID: 76ede4ed506525149a2cba872db46409
+      internalID: -1659092591
       vertices: []
       indices: 
       edges: []
@@ -168,8 +156,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      health: -527628104
-      Tree: -1544420909
+      chest2_0: -460303756
+      chest2_1: -1659092591
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

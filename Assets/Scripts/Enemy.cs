@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDamagable
 {
-    [SerializeField] Transform targetDestination;
-    [SerializeField] GameObject targetGameObject;
+    Transform targetDestination;
+    Character targetCharacter;
+    GameObject targetGameObject;
     [SerializeField] float speed;
 
-    Character targetCharacter;
 
     Rigidbody2D rgdbd2d;
 
@@ -18,7 +18,12 @@ public class Enemy : MonoBehaviour
     private void Awake()
     {
         rgdbd2d = GetComponent<Rigidbody2D>();
-        targetGameObject = targetDestination.gameObject;
+    }
+
+    public void SetTarget(GameObject target)
+    {
+        targetGameObject = target;
+        targetDestination = target.transform;
     }
 
     private void FixedUpdate()

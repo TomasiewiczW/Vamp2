@@ -50,10 +50,10 @@ public class WhipWeapon : MonoBehaviour
     {
         for( int i = 0; i < colliders.Length; i++)
         {
-            Enemy e = colliders[i].GetComponent<Enemy>();
+            IDamagable e = colliders[i].GetComponent<IDamagable>();
             if (e != null)
             {
-                colliders[i].GetComponent<Enemy>().TakeDamage(WhipDamage);
+                e.TakeDamage(WhipDamage);
             }
             
         }
