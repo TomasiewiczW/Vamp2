@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour, IDamagable
 
     [SerializeField] int hp = 999;
     [SerializeField] int damage = 1;
+    [SerializeField] int experience_reward = 400;
 
     private void Awake()
     {
@@ -56,6 +57,7 @@ public class Enemy : MonoBehaviour, IDamagable
         hp -= damage;
         if(hp < 1)
         {
+            targetGameObject.GetComponent<Level>().AddExperience(experience_reward);
             Destroy(gameObject);
         }
     }
