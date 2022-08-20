@@ -10,7 +10,7 @@ public class PickUp : MonoBehaviour
         Character c = collision.GetComponent<Character>();
         if( c != null)
         {
-            c.heal(healAmount);
+            GetComponent<IPickUpObject>().OnPickup(c);
             Destroy(gameObject);
         }
     }
