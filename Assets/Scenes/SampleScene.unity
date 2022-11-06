@@ -1287,7 +1287,7 @@ Transform:
   m_Children:
   - {fileID: 126545336}
   m_Father: {fileID: 1649438741}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &665537844
 MonoBehaviour:
@@ -1457,7 +1457,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.553352, y: 1}
+    m_SensorSize: {x: 1.1761566, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1482,6 +1482,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &691655471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691655472}
+  - component: {fileID: 691655473}
+  m_Layer: 0
+  m_Name: wpn_ThrowingKnife
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &691655472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691655471}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1649438741}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &691655473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691655471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8991c67fa1ea9d543a3a7d3dfd32f149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToAttack: 1.5
+  knifePrefab: {fileID: 3951144824175047943, guid: 4b1719936ff22de4ca83b309b3a534c0, type: 3}
 --- !u!1 &698131716
 GameObject:
   m_ObjectHideFlags: 0
@@ -2955,7 +3001,7 @@ Transform:
   - {fileID: 2016464035}
   - {fileID: 89010946}
   m_Father: {fileID: 1649438741}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1514384005
 MonoBehaviour:
@@ -3083,8 +3129,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1324977108}
-  - {fileID: 1514384004}
   - {fileID: 665537843}
+  - {fileID: 1514384004}
+  - {fileID: 691655472}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
